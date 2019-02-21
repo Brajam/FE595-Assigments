@@ -1,7 +1,7 @@
 ##Import flask
 from flask import Flask
 from flask import render_template
-import request
+import requests
 
 
 ##definition of the REST API

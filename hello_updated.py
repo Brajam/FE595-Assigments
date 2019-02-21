@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/hello_updated', methods=['GET'])
 
 #Function
-def hello_updated():
+def hello():
         return render_template('index.html')
 #        get_request = requests.get('https://theyfightcrime.org/')
 #        return render_template('index.html', title='Hola Mundo')

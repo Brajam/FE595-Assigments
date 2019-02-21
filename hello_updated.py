@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 ##Function
 def hello_updated():
-        get_request = requests.get('https://theyfightcrime.org/')
+#        get_request = requests.get('https://theyfightcrime.org/')
         return render_template('index.html',title='Hola Mundo')
 
 

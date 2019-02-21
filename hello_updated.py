@@ -11,7 +11,7 @@ app = Flask(__name__)
 ##Function
 def hello_updated():
 #        get_request = requests.get('https://theyfightcrime.org/')
-        return render_template('index.html',title='Hola Mundo')
+        return render_template('index.html', title='Hola Mundo')
 
 
 if __name__ == "__main__":

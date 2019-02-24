@@ -10,6 +10,7 @@ from requests import get
 import re as re
 # Import flask
 from flask import Flask
+from flask import jsonify
 
 # definition of the REST API
 app = Flask(__name__)
@@ -49,8 +50,10 @@ def get_fight():
         csvFile.write("\n".join(male_list))
     with open('female.csv', 'w') as csvFile:
         csvFile.write("\n".join(female_list))
-
-    return female_list, male_list
+# Returning the list gave error, so i googled it and found in
+# that using jsonify will convert the list
+# web https://stackoverflow.com/questions/12193013/flask-python-trying-to-return-list-or-dict-to-ajax-call
+    return jsonify(Male=male_list,Female=female_list)
 
 
 if __name__ == "__main__":
